@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var imageData: Data? = nil
+    @State var showCamera: Bool = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            CameraView(imageData: $imageData, showCamera: $showCamera)
         }
         .padding()
     }
