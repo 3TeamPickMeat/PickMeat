@@ -11,9 +11,15 @@
 		1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E3B2C2D5A010038D597 /* ContentView.swift */; };
 		1A221E3E2C2D5A020038D597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A221E3D2C2D5A020038D597 /* Assets.xcassets */; };
 		1A221E412C2D5A020038D597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A221E402C2D5A020038D597 /* Preview Assets.xcassets */; };
-		1A221E4B2C2FFF900038D597 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E4A2C2FFF900038D597 /* CameraView.swift */; };
-		1A221E512C300AF60038D597 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E502C300AF60038D597 /* Camera.swift */; };
-		1A221E532C300B040038D597 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E522C300B040038D597 /* CameraViewModel.swift */; };
+		1A5D109B2C365DC400A4FEEF /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D109A2C365DC400A4FEEF /* CameraViewModel.swift */; };
+		1A5D109F2C365DF700A4FEEF /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D109E2C365DF700A4FEEF /* CameraView.swift */; };
+		1A5D10A12C365E1D00A4FEEF /* CemaraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10A02C365E1D00A4FEEF /* CemaraPreview.swift */; };
+		1A5D10A32C365E4C00A4FEEF /* CameraView+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10A22C365E4C00A4FEEF /* CameraView+Buttons.swift */; };
+		1A5D10A52C365E5E00A4FEEF /* CameraView+HorizontalControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10A42C365E5E00A4FEEF /* CameraView+HorizontalControlBar.swift */; };
+		1A5D10A72C365E7000A4FEEF /* ControlButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10A62C365E7000A4FEEF /* ControlButtonView.swift */; };
+		1A5D10A92C365E8100A4FEEF /* CameraView+VerticalControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10A82C365E8100A4FEEF /* CameraView+VerticalControlBar.swift */; };
+		1A5D10AC2C365EA600A4FEEF /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10AB2C365EA600A4FEEF /* View+.swift */; };
+		1A5D10AE2C365EB800A4FEEF /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10AD2C365EB800A4FEEF /* UIDeviceOrientation.swift */; };
 		1F65AB612C362C3C00FEB692 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65AB602C362C3C00FEB692 /* SplashView.swift */; };
 		1F65AB632C362C5500FEB692 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65AB622C362C5500FEB692 /* TipView.swift */; };
 		1F65AB662C362C7000FEB692 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1F65AB652C362C7000FEB692 /* SDWebImageSwiftUI */; };
@@ -25,9 +31,15 @@
 		1A221E3B2C2D5A010038D597 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A221E3D2C2D5A020038D597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A221E402C2D5A020038D597 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1A221E4A2C2FFF900038D597 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		1A221E502C300AF60038D597 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		1A221E522C300B040038D597 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		1A5D109A2C365DC400A4FEEF /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		1A5D109E2C365DF700A4FEEF /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		1A5D10A02C365E1D00A4FEEF /* CemaraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CemaraPreview.swift; sourceTree = "<group>"; };
+		1A5D10A22C365E4C00A4FEEF /* CameraView+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+Buttons.swift"; sourceTree = "<group>"; };
+		1A5D10A42C365E5E00A4FEEF /* CameraView+HorizontalControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+HorizontalControlBar.swift"; sourceTree = "<group>"; };
+		1A5D10A62C365E7000A4FEEF /* ControlButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtonView.swift; sourceTree = "<group>"; };
+		1A5D10A82C365E8100A4FEEF /* CameraView+VerticalControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+VerticalControlBar.swift"; sourceTree = "<group>"; };
+		1A5D10AB2C365EA600A4FEEF /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		1A5D10AD2C365EB800A4FEEF /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceOrientation.swift; sourceTree = "<group>"; };
 		1F65AB602C362C3C00FEB692 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1F65AB622C362C5500FEB692 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +75,7 @@
 		1A221E382C2D5A010038D597 /* PickMeatProject */ = {
 			isa = PBXGroup;
 			children = (
+				1A5D10AA2C365E9400A4FEEF /* extensions */,
 				1A221E492C2D5A130038D597 /* VM */,
 				1A221E482C2D5A0F0038D597 /* Model */,
 				1A221E472C2D5A070038D597 /* View */,
@@ -85,9 +98,14 @@
 		1A221E472C2D5A070038D597 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1A221E4A2C2FFF900038D597 /* CameraView.swift */,
 				1F65AB602C362C3C00FEB692 /* SplashView.swift */,
 				1F65AB622C362C5500FEB692 /* TipView.swift */,
+				1A5D109E2C365DF700A4FEEF /* CameraView.swift */,
+				1A5D10A02C365E1D00A4FEEF /* CemaraPreview.swift */,
+				1A5D10A22C365E4C00A4FEEF /* CameraView+Buttons.swift */,
+				1A5D10A42C365E5E00A4FEEF /* CameraView+HorizontalControlBar.swift */,
+				1A5D10A62C365E7000A4FEEF /* ControlButtonView.swift */,
+				1A5D10A82C365E8100A4FEEF /* CameraView+VerticalControlBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,7 +113,6 @@
 		1A221E482C2D5A0F0038D597 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1A221E502C300AF60038D597 /* Camera.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,9 +120,18 @@
 		1A221E492C2D5A130038D597 /* VM */ = {
 			isa = PBXGroup;
 			children = (
-				1A221E522C300B040038D597 /* CameraViewModel.swift */,
+				1A5D109A2C365DC400A4FEEF /* CameraViewModel.swift */,
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		1A5D10AA2C365E9400A4FEEF /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A5D10AB2C365EA600A4FEEF /* View+.swift */,
+				1A5D10AD2C365EB800A4FEEF /* UIDeviceOrientation.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +211,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F65AB632C362C5500FEB692 /* TipView.swift in Sources */,
-				1A221E512C300AF60038D597 /* Camera.swift in Sources */,
-				1A221E4B2C2FFF900038D597 /* CameraView.swift in Sources */,
+				1A5D10A32C365E4C00A4FEEF /* CameraView+Buttons.swift in Sources */,
+				1A5D10A12C365E1D00A4FEEF /* CemaraPreview.swift in Sources */,
 				1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */,
-				1A221E532C300B040038D597 /* CameraViewModel.swift in Sources */,
+				1A5D10AC2C365EA600A4FEEF /* View+.swift in Sources */,
+				1A5D10A92C365E8100A4FEEF /* CameraView+VerticalControlBar.swift in Sources */,
+				1A5D10A72C365E7000A4FEEF /* ControlButtonView.swift in Sources */,
 				1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */,
+				1A5D109F2C365DF700A4FEEF /* CameraView.swift in Sources */,
+				1A5D109B2C365DC400A4FEEF /* CameraViewModel.swift in Sources */,
+				1A5D10A52C365E5E00A4FEEF /* CameraView+HorizontalControlBar.swift in Sources */,
+				1A5D10AE2C365EB800A4FEEF /* UIDeviceOrientation.swift in Sources */,
 				1F65AB612C362C3C00FEB692 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
