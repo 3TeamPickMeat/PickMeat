@@ -10,7 +10,7 @@ import SwiftUI
 extension CameraView {
     @ViewBuilder var verticalControlBar: some View {
         if VM.hasPhoto {
-            verticalControlBarPrePhoto
+            verticalControlBarPostPhoto
         } else {
             verticalControlBarPrePhoto
         }
@@ -25,6 +25,7 @@ extension CameraView {
             AlbumButton
                 .frame(height: controlButtonWidth)
         }
+        .padding(.vertical, -15)
     }
     
     var verticalControlBarPostPhoto: some View {
@@ -39,7 +40,7 @@ extension CameraView {
 }
 
 
-#Preview {
-    CameraView(imageData: .constant(nil), showCamera: .constant(true))
-}
+//#Preview {
+//    CameraView(showCamera: .constant(true))
+//}
 

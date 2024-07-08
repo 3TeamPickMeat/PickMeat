@@ -11,15 +11,27 @@ import SwiftUI
 extension CameraView {
     
     var usePhotoButton: some View {
-        ControlButtonView(label: "Send") {
-            imageData = VM.photoData
+        Button {
+            imageData = recentPhotoData
             showCamera = false
+        } label: {
+            Text("Send")
+                .tint(.white)
+                .font(.title3)
+                .fontWeight(.semibold)
         }
     }
     
     var retakeButton: some View {
-        ControlButtonView(label: "다시찍기") {
+        Button {
+            recentPhotoData = nil
+            showCamera = true
             VM.retakePhoto()
+        } label: {
+            Text("다시찍기")
+                .tint(.white)
+                .font(.title3)
+                .fontWeight(.semibold)
         }
     }
     
@@ -72,7 +84,7 @@ extension CameraView {
     
 }
 
-#Preview {
-    CameraView(imageData: .constant(nil), showCamera: .constant(true))
-}
+//#Preview {
+//    CameraView(showCamera: .constant(true))
+//}
 

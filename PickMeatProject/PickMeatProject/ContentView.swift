@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var imageData: Data? = nil
-    @State var showCamera: Bool = false
+    @State private var showCamera = true
+    @State private var imageData: Data?
+
     var body: some View {
-        VStack {
-            CameraView(imageData: $imageData, showCamera: $showCamera)
+        NavigationView {
+            VStack {
+                if showCamera {
+                    CameraView(imageData: $imageData, showCamera: $showCamera)
+                } else {
+                    AlbumImageSelectPage(showCamera: $showCamera, imageData: $imageData)
+                }
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
