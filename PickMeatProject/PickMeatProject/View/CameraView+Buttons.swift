@@ -43,7 +43,7 @@ extension CameraView {
         } label: {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(red: 0/255, green: 178/255, blue: 255/255), lineWidth: 5)
-                .frame(width: 75, height: 75)
+                .frame(width: 65, height: 65)
                 .padding()
         }
     }

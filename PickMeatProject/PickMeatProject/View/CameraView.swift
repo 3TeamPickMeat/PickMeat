@@ -81,31 +81,6 @@ struct CameraView: View {
         .ignoresSafeArea()
     }
     
-//    private var overlayContent: some View {
-//        VStack {
-//            Spacer()
-//            
-//            HStack {
-//                Spacer()
-//                
-//                VStack {
-//                    Text("촬영 버튼")
-//                        .font(.subheadline)
-//                        .foregroundColor(.white)
-//                        .padding(5)
-//                        .background(Color.black.opacity(0.7))
-//                        .cornerRadius(5)
-//                    
-//                    Image(systemName: "camera")
-//                        .resizable()
-//                        .frame(width: 50, height: 50)
-//                        .foregroundColor(.white)
-//                }
-//                .padding()
-//            }
-//        }
-//    }
-    
     private var helpOverlay: some View {
         ZStack {
             Color.black.opacity(0.7)
