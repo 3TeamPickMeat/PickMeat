@@ -19,6 +19,8 @@ struct CameraView: View {
 
     @State var showPhotoPicker = false
     @State var recentPhotoData: Data?
+    
+    @State var showHelpOverlay = true  // 도움말 오버레이 상태 변수 추가
 
     let controlButtonWidth: CGFloat = 120
     let controlFrameHeight: CGFloat = 90
@@ -41,6 +43,15 @@ struct CameraView: View {
                     horizontalControlBar
                         .frame(height: controlFrameHeight)
                 }
+            }
+            if showHelpOverlay {
+                helpOverlay
+                    .transition(.opacity)
+                    .onTapGesture {
+                        withAnimation {
+                            showHelpOverlay = false
+                        }
+                    }
             }
         }
         .photosPicker(isPresented: $showPhotoPicker, selection: $selectedItem, matching: .images)
@@ -69,7 +80,55 @@ struct CameraView: View {
         }
         .ignoresSafeArea()
     }
-
+    
+//    private var overlayContent: some View {
+//        VStack {
+//            Spacer()
+//            
+//            HStack {
+//                Spacer()
+//                
+//                VStack {
+//                    Text("촬영 버튼")
+//                        .font(.subheadline)
+//                        .foregroundColor(.white)
+//                        .padding(5)
+//                        .background(Color.black.opacity(0.7))
+//                        .cornerRadius(5)
+//                    
+//                    Image(systemName: "camera")
+//                        .resizable()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(.white)
+//                }
+//                .padding()
+//            }
+//        }
+//    }
+    
+    private var helpOverlay: some View {
+        ZStack {
+            Color.black.opacity(0.7)
+                .ignoresSafeArea()
+            
+            VStack {
+                Text("카메라 기능 설명")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.black.opacity(0.8))
+                    .cornerRadius(10)
+                    .padding()
+                
+                Spacer()
+                
+                Text("화면을 터치하여 도움말을 닫으세요")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                    .padding()
+            }
+        }
+    }
 }
 
 struct CameraView_Previews: PreviewProvider {
@@ -77,4 +136,3 @@ struct CameraView_Previews: PreviewProvider {
         CameraView(imageData: .constant(nil), showCamera: .constant(true))
     }
 }
-
