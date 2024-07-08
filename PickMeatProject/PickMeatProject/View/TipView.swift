@@ -22,7 +22,7 @@ struct TipView: View {
                     Text("수입,국산 특징").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    .position(x: 175, y: 50)
+                    .position(x: 175, y: 10)
                     .frame(width: 350)
                     .padding()
                 
@@ -85,6 +85,8 @@ struct TipView: View {
                         }
                     })
                     .frame(height: 600) // 최소 높이 설정
+                    .navigationTitle("꿀팁")
+                    .navigationBarTitleDisplayMode(.automatic)
             
         })
 

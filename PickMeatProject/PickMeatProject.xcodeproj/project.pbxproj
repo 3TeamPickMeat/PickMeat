@@ -19,6 +19,18 @@
 		1A5D10A92C365E8100A4FEEF /* CameraView+VerticalControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10A82C365E8100A4FEEF /* CameraView+VerticalControlBar.swift */; };
 		1A5D10AC2C365EA600A4FEEF /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10AB2C365EA600A4FEEF /* View+.swift */; };
 		1A5D10AE2C365EB800A4FEEF /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D10AD2C365EB800A4FEEF /* UIDeviceOrientation.swift */; };
+		1A6DD7DD2C3BF8FC00EDE08A /* ResultDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6DD7DC2C3BF8FC00EDE08A /* ResultDetailViewModel.swift */; };
+		1A6DD7DF2C3BF92D00EDE08A /* ResultDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6DD7DE2C3BF92D00EDE08A /* ResultDetailModel.swift */; };
+		1A6DD7E12C3BFD4D00EDE08A /* ResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6DD7E02C3BFD4D00EDE08A /* ResultDetailView.swift */; };
+		1AB600052C3BA2AC000524A1 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6FFFE2C3BA2AC000524A1 /* ClassModel.swift */; };
+		1AB600062C3BA2AC000524A1 /* GetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6FFFF2C3BA2AC000524A1 /* GetModel.swift */; };
+		1AB600072C3BA2AC000524A1 /* MeatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600002C3BA2AC000524A1 /* MeatClass.swift */; };
+		1AB600082C3BA2AC000524A1 /* PhotoTopython.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */; };
+		1AB600092C3BA2AC000524A1 /* SendImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600022C3BA2AC000524A1 /* SendImage.swift */; };
+		1AB6000A2C3BA2AC000524A1 /* SendPythonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */; };
+		1AB6000D2C3BA2C1000524A1 /* MeatDetecting.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6000B2C3BA2C1000524A1 /* MeatDetecting.mlmodel */; };
+		1AB6000E2C3BA2C1000524A1 /* Meatclassfication.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6000C2C3BA2C1000524A1 /* Meatclassfication.mlmodel */; };
+		1AB600112C3BA2FA000524A1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB600102C3BA2FA000524A1 /* Alamofire */; };
 		1AF22CC62C36962D00CD9D6C /* AlbumImageSelectPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF22CC52C36962D00CD9D6C /* AlbumImageSelectPage.swift */; };
 		1AF22CC82C36968400CD9D6C /* SelectImageViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF22CC72C36968400CD9D6C /* SelectImageViewButton.swift */; };
 		1AF22CCA2C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF22CC92C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift */; };
@@ -42,6 +54,17 @@
 		1A5D10A82C365E8100A4FEEF /* CameraView+VerticalControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraView+VerticalControlBar.swift"; sourceTree = "<group>"; };
 		1A5D10AB2C365EA600A4FEEF /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		1A5D10AD2C365EB800A4FEEF /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceOrientation.swift; sourceTree = "<group>"; };
+		1A6DD7DC2C3BF8FC00EDE08A /* ResultDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewModel.swift; sourceTree = "<group>"; };
+		1A6DD7DE2C3BF92D00EDE08A /* ResultDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailModel.swift; sourceTree = "<group>"; };
+		1A6DD7E02C3BFD4D00EDE08A /* ResultDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailView.swift; sourceTree = "<group>"; };
+		1AB600002C3BA2AC000524A1 /* MeatClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatClass.swift; sourceTree = "<group>"; };
+		1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTopython.swift; sourceTree = "<group>"; };
+		1AB600022C3BA2AC000524A1 /* SendImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendImage.swift; sourceTree = "<group>"; };
+		1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPythonModel.swift; sourceTree = "<group>"; };
+		1AB6000B2C3BA2C1000524A1 /* MeatDetecting.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MeatDetecting.mlmodel; sourceTree = "<group>"; };
+		1AB6000C2C3BA2C1000524A1 /* Meatclassfication.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Meatclassfication.mlmodel; sourceTree = "<group>"; };
+		1AB6FFFE2C3BA2AC000524A1 /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
+		1AB6FFFF2C3BA2AC000524A1 /* GetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetModel.swift; sourceTree = "<group>"; };
 		1AF22CC52C36962D00CD9D6C /* AlbumImageSelectPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageSelectPage.swift; sourceTree = "<group>"; };
 		1AF22CC72C36968400CD9D6C /* SelectImageViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewButton.swift; sourceTree = "<group>"; };
 		1AF22CC92C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewHoriControlBar.swift; sourceTree = "<group>"; };
@@ -56,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F65AB662C362C7000FEB692 /* SDWebImageSwiftUI in Frameworks */,
+				1AB600112C3BA2FA000524A1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +105,9 @@
 		1A221E382C2D5A010038D597 /* PickMeatProject */ = {
 			isa = PBXGroup;
 			children = (
+				1AB6000C2C3BA2C1000524A1 /* Meatclassfication.mlmodel */,
+				1AB6000B2C3BA2C1000524A1 /* MeatDetecting.mlmodel */,
+				1AB600042C3BA2AC000524A1 /* photoTest */,
 				1A5D10AA2C365E9400A4FEEF /* extensions */,
 				1A221E492C2D5A130038D597 /* VM */,
 				1A221E482C2D5A0F0038D597 /* Model */,
@@ -115,6 +142,7 @@
 				1AF22CC72C36968400CD9D6C /* SelectImageViewButton.swift */,
 				1AF22CC92C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift */,
 				1AF22CCB2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift */,
+				1A6DD7E02C3BFD4D00EDE08A /* ResultDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +150,7 @@
 		1A221E482C2D5A0F0038D597 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A6DD7DE2C3BF92D00EDE08A /* ResultDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5D109A2C365DC400A4FEEF /* CameraViewModel.swift */,
+				1A6DD7DC2C3BF8FC00EDE08A /* ResultDetailViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -141,6 +171,19 @@
 				1A5D10AD2C365EB800A4FEEF /* UIDeviceOrientation.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		1AB600042C3BA2AC000524A1 /* photoTest */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6FFFE2C3BA2AC000524A1 /* ClassModel.swift */,
+				1AB6FFFF2C3BA2AC000524A1 /* GetModel.swift */,
+				1AB600002C3BA2AC000524A1 /* MeatClass.swift */,
+				1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */,
+				1AB600022C3BA2AC000524A1 /* SendImage.swift */,
+				1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */,
+			);
+			path = photoTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +204,7 @@
 			name = PickMeatProject;
 			packageProductDependencies = (
 				1F65AB652C362C7000FEB692 /* SDWebImageSwiftUI */,
+				1AB600102C3BA2FA000524A1 /* Alamofire */,
 			);
 			productName = PickMeatProject;
 			productReference = 1A221E362C2D5A010038D597 /* PickMeatProject.app */;
@@ -192,6 +236,7 @@
 			mainGroup = 1A221E2D2C2D5A010038D597;
 			packageReferences = (
 				1F65AB642C362C7000FEB692 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				1AB6000F2C3BA2FA000524A1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1A221E372C2D5A010038D597 /* Products */;
 			projectDirPath = "";
@@ -220,21 +265,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF22CC82C36968400CD9D6C /* SelectImageViewButton.swift in Sources */,
+				1AB600082C3BA2AC000524A1 /* PhotoTopython.swift in Sources */,
 				1F65AB632C362C5500FEB692 /* TipView.swift in Sources */,
+				1A6DD7DD2C3BF8FC00EDE08A /* ResultDetailViewModel.swift in Sources */,
 				1A5D10A32C365E4C00A4FEEF /* CameraView+Buttons.swift in Sources */,
 				1A5D10A12C365E1D00A4FEEF /* CemaraPreview.swift in Sources */,
+				1AB600052C3BA2AC000524A1 /* ClassModel.swift in Sources */,
+				1A6DD7E12C3BFD4D00EDE08A /* ResultDetailView.swift in Sources */,
 				1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */,
 				1A5D10AC2C365EA600A4FEEF /* View+.swift in Sources */,
 				1A5D10A92C365E8100A4FEEF /* CameraView+VerticalControlBar.swift in Sources */,
 				1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */,
 				1A5D109F2C365DF700A4FEEF /* CameraView.swift in Sources */,
+				1AB600092C3BA2AC000524A1 /* SendImage.swift in Sources */,
+				1AB600062C3BA2AC000524A1 /* GetModel.swift in Sources */,
+				1AB6000A2C3BA2AC000524A1 /* SendPythonModel.swift in Sources */,
 				1A5D109B2C365DC400A4FEEF /* CameraViewModel.swift in Sources */,
 				1AF22CCA2C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift in Sources */,
 				1AF22CC62C36962D00CD9D6C /* AlbumImageSelectPage.swift in Sources */,
 				1A5D10A52C365E5E00A4FEEF /* CameraView+HorizontalControlBar.swift in Sources */,
+				1AB6000D2C3BA2C1000524A1 /* MeatDetecting.mlmodel in Sources */,
+				1AB6000E2C3BA2C1000524A1 /* Meatclassfication.mlmodel in Sources */,
+				1A6DD7DF2C3BF92D00EDE08A /* ResultDetailModel.swift in Sources */,
 				1AF22CCC2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift in Sources */,
 				1A5D10AE2C365EB800A4FEEF /* UIDeviceOrientation.swift in Sources */,
 				1F65AB612C362C3C00FEB692 /* SplashView.swift in Sources */,
+				1AB600072C3BA2AC000524A1 /* MeatClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +506,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1AB6000F2C3BA2FA000524A1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		1F65AB642C362C7000FEB692 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -461,6 +525,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1AB600102C3BA2FA000524A1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB6000F2C3BA2FA000524A1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		1F65AB652C362C7000FEB692 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1F65AB642C362C7000FEB692 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
