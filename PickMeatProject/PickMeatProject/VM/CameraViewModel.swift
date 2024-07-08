@@ -10,6 +10,7 @@ import AVFoundation
 import UIKit
 import SwiftUI
 import PhotosUI
+import Photos
 
 @Observable
 class CameraViewModel: NSObject {
@@ -49,6 +50,10 @@ class CameraViewModel: NSObject {
             print("other status")
         }
     }
+    
+    
+
+    
     
     private func setup() {
         session.beginConfiguration()

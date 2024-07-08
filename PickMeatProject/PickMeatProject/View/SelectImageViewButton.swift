@@ -26,7 +26,7 @@ extension AlbumImageSelectPage {
             showCamera = true
             VM.retakePhoto()
         } label: {
-            Text("다시찍기")
+            Text("취소")
                 .tint(.white)
                 .font(.title3)
                 .fontWeight(.semibold)
