@@ -12,14 +12,23 @@ struct ContentView: View {
     @State private var imageData: Data?
 
     var body: some View {
-        NavigationView {
-            VStack {
-                if showCamera {
-                    CameraView(imageData: $imageData, showCamera: $showCamera)
-                } else {
-                    AlbumImageSelectPage(showCamera: $showCamera, imageData: $imageData)
-                }
+        TabView {
+            if showCamera {
+                CameraView(imageData: $imageData, showCamera: $showCamera)
+                    .tabItem {
+                        Label("Camera", systemImage: "camera")
+                    }
+            } else {
+                AlbumImageSelectPage(showCamera: $showCamera, imageData: $imageData)
             }
+            TipView()
+                .tabItem {
+                    Label("Tip", systemImage: "lightbulb")
+                }
+            SplashView()
+                .tabItem {
+                    Label("Splash", systemImage: "sparkles")
+                }
         }
     }
 }
