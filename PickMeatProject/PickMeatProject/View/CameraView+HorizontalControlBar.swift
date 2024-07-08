@@ -27,7 +27,7 @@ extension CameraView {
             changeCamera
                 .frame(width: controlButtonWidth)
         }
-        .padding(.horizontal, 10) // 패딩을 추가하여 양쪽에 여백을 줍니다.
+//        .padding(.horizontal, 10)
     }
     
     var horizontalControlBarPostPhoto: some View {
@@ -42,6 +42,6 @@ extension CameraView {
     }
 }
 
-#Preview {
-    CameraView(imageData: .constant(nil), showCamera: .constant(true))
-}
+//#Preview {
+//    CameraView(showCamera: .constant(true))
+//}

@@ -15,6 +15,7 @@ struct CameraView: View {
     @Binding var imageData: Data?
     @Binding var showCamera: Bool
     @State var selectedItem: PhotosPickerItem?
+    @State var selectImage: UIImage?
 
     @State var showPhotoPicker = false
     @State var recentPhotoData: Data?
@@ -47,8 +48,11 @@ struct CameraView: View {
             if let item = selectedItem {
                 Task {
                     if let data = try? await item.loadTransferable(type: Data.self) {
+                        selectImage = UIImage(data: data)
                         imageData = data
                         showCamera = false
+                        print("이미지 사진 : ", selectImage!)
+                        print("data : \(imageData!)")
                     }
                 }
             }
