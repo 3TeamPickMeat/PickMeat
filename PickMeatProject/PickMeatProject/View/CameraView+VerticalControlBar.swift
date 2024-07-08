@@ -11,6 +11,7 @@ extension CameraView {
     @ViewBuilder var verticalControlBar: some View {
         if VM.hasPhoto {
             verticalControlBarPostPhoto
+                .toolbar(.hidden, for: .tabBar)
         } else {
             verticalControlBarPrePhoto
         }

@@ -9,11 +9,15 @@ import SwiftUI
 
 extension CameraView {
     @ViewBuilder var horizontalControlBar: some View {
-        if VM.hasPhoto {
-            horizontalControlBarPostPhoto
-        } else {
-            horizontalControlBarPrePhoto
+        VStack {
+            if VM.hasPhoto {
+                horizontalControlBarPostPhoto
+                    .toolbar(.hidden, for: .tabBar)
+            } else {
+                horizontalControlBarPrePhoto
+            }
         }
+        
     }
     
     var horizontalControlBarPrePhoto: some View {

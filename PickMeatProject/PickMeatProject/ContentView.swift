@@ -8,26 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showCamera = true
-    @State private var imageData: Data?
-
+    
+    @State var showCamera = true
+    @State var imageData: Data?
+    @State var selectedTab = 0
+    
+    
+    
     var body: some View {
         TabView {
             if showCamera {
                 CameraView(imageData: $imageData, showCamera: $showCamera)
                     .tabItem {
-                        Label("Camera", systemImage: "camera")
+                        Label("카메라", systemImage: "camera")
                     }
             } else {
                 AlbumImageSelectPage(showCamera: $showCamera, imageData: $imageData)
+                    .tabItem {
+                        Label("카메라", systemImage: "camera")
+                    }
             }
             TipView()
                 .tabItem {
-                    Label("Tip", systemImage: "lightbulb")
+                    Label("팁", systemImage: "lightbulb")
                 }
-            SplashView()
+            ResultDetailView()
                 .tabItem {
-                    Label("Splash", systemImage: "sparkles")
+                    Label("검사결과", systemImage: "doc.plaintext.fill")
                 }
         }
     }
