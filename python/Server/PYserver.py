@@ -44,7 +44,6 @@ async def upload_image(file: UploadFile = File(...) ,x: str = Form(...), y: str 
     # crop_data = json.loads(size)
     # print(crop_data)
     
-
     print("입장함")
     # print("스트링값",crop_data)
     # print("타입",crop_data.type())
@@ -73,7 +72,7 @@ async def upload_image(file: UploadFile = File(...) ,x: str = Form(...), y: str 
     print(name[np.argmax(result)])
 
     #return " ok"
-    return JSONResponse(content={"result": name[np.argmax(result)]})
+    return JSONResponse(name[np.argmax(result)])
 
 if __name__ == "__main__":
 

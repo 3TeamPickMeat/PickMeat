@@ -18,7 +18,7 @@ extension AlbumImageSelectPage {
                 .fontWeight(.semibold)
         }
         .simultaneousGesture(TapGesture().onEnded {
-          
+            //loadModel.isLoad = false
              getmodeldata()
             if resultpred == ""{
                 isActive = true
