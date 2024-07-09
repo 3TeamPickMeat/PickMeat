@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PickMeatProjectApp: App {
+    @StateObject  var loadModel = ImageClassificationViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(loadModel)
         }
     }
 }

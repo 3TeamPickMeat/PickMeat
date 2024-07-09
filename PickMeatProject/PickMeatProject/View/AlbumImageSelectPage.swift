@@ -11,6 +11,10 @@ import _PhotosUI_SwiftUI
 struct AlbumImageSelectPage: View {
     @Environment(\.verticalSizeClass) var vertiSizeClass
     
+    @State var ret: String = ""
+    
+    //@State var showResult: Bool = false
+    @State var isActive: Bool = false
     //@StateObject var loadModel = ImageClassificationViewModel()
     @EnvironmentObject var loadModel: ImageClassificationViewModel
     
@@ -28,6 +32,8 @@ struct AlbumImageSelectPage: View {
     
     @State var showMessage: Bool = false
     
+    @State var resultpred: String = ""
+    
     //@ var showProgress: Bool // 로딩 상태 변수 추가
     
     let controlButtonWidth: CGFloat = 120
@@ -37,28 +43,24 @@ struct AlbumImageSelectPage: View {
     var isLandscape: Bool { vertiSizeClass == .compact }
     
     var body: some View {
-        ZStack{
-            
-            Color(.black)
-                .ignoresSafeArea()
-            //Spacer()
-            VStack {
-               
-           
-                            
-                
-                Spacer()
-                if let imageData = imageData, let uiImage = UIImage(data: imageData) {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .frame(width: 300, height:  550)
-                        .aspectRatio(contentMode: .fit)
+        NavigationStack{
+            ZStack{
+                Color(.black)
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    if let imageData = imageData, let uiImage = UIImage(data: imageData) {
+                        
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .frame(width: 300, height:  550)
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } else {
+                        Text("이미지를 불러올 수 없습니다.")
+                    }
                     
-                } else {
-                    Text("이미지를 불러올 수 없습니다.")
-                }
-                
-                Spacer()
+                    Spacer()
                     HStack {
                         if isLandscape {
                             verticalControlBar
@@ -69,50 +71,51 @@ struct AlbumImageSelectPage: View {
                         horizontalControlBar
                             .frame(height: controlFrameHeight)
                     }
-            }
-            .onAppear {
-                if let imageData = imageData {
-                    print("앨범 이미지 데이터: \(imageData)")
-                } else {
-                    print("앨범 이미지가 없습니다.")
                 }
-                showMessageWithTimer()
-                
-            }
-            .toolbar(.hidden, for: .tabBar)
-            if showMessage{
-                Text(checkImage)
-                    .padding()
-                    .background(Color.black.opacity(0.7))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    //.transition(.opacity)
-                    .frame(width: 350,height: 40)
-                    .position(x: 190 , y: 50)
-            }
-               
+                .onAppear {
+                    if let imageData = imageData {
+                        print("앨범 이미지 데이터: \(imageData)")
                         
-            if  loadModel.isLoad{
-       
-                 CustomProgressView()
-             }
+                    } else {
+                        print("앨범 이미지가 없습니다.")
+                    }
+                    showMessageWithTimer()
+                    
+                }
+                .toolbar(.hidden, for: .tabBar)
+                if showMessage{
+                    Text(checkImage)
+                        .padding()
+                        .background(Color.black.opacity(0.7))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                    //.transition(.opacity)
+                        .frame(width: 350,height: 40)
+                        .position(x: 190 , y: 50)
+                }
+                
+                
+                if  loadModel.isLoad{
+                    CustomProgressView()
+                }
+                if isActive{
+                    CustomProgressView()
+                }
+            }
+            
         }
         
-     
-        
+   
     }
-    
     func showMessageWithTimer()  {
         print("ad",loadModel.isLoad)
-         showMessage = true
-         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-             withAnimation {
-                 print(checkImage)
-                 showMessage = false
-             }
-         }
-     }
-
+        showMessage = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            withAnimation {
+                showMessage = false
+            }
+        }
+    }
 }
 
 
