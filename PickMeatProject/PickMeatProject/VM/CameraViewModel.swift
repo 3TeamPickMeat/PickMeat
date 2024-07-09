@@ -157,8 +157,10 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
             self.session.stopRunning()
             await MainActor.run {
                 let image = UIImage(cgImage: cgImage, scale: 1, orientation: UIDevice.current.orientation.uiImageOrientation)
-                
+               
                 let imageData = image.pngData()
+                let save = SaveImage()
+                save.imageData = image
                 
                 withAnimation {
                     if let imageData = imageData {
