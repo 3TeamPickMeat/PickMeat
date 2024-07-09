@@ -44,7 +44,8 @@ struct SendImage: View {
                 Spacer()
                 Button("Send", action: {
                    let sendimage = SendImageViewModel()
-                    sendimage.uploadImage(image: image!, to: "http://127.0.0.1:8000/upload")
+//                    sendimage.uploadImage(image: image!, to: "http://127.0.0.1:8000/upload")
+                    
                               })
                 .padding()
           

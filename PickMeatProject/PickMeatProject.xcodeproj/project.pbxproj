@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A1C8E932C3CF18500A69E02 /* MeatClassficationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C8E912C3CF18500A69E02 /* MeatClassficationView.swift */; };
-		1A1C8E962C3CF18C00A69E02 /* progres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C8E942C3CF18C00A69E02 /* progres.swift */; };
 		1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E392C2D5A010038D597 /* PickMeatProjectApp.swift */; };
 		1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E3B2C2D5A010038D597 /* ContentView.swift */; };
 		1A221E3E2C2D5A020038D597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A221E3D2C2D5A020038D597 /* Assets.xcassets */; };
@@ -37,6 +35,9 @@
 		1AF22CC82C36968400CD9D6C /* SelectImageViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF22CC72C36968400CD9D6C /* SelectImageViewButton.swift */; };
 		1AF22CCA2C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF22CC92C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift */; };
 		1AF22CCC2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF22CCB2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift */; };
+		1F4C32482C3CE82C00C9ABA3 /* MeatClassficationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C32462C3CE82C00C9ABA3 /* MeatClassficationView.swift */; };
+		1F4C324B2C3CE83400C9ABA3 /* progres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C32492C3CE83400C9ABA3 /* progres.swift */; };
+		1F4C324D2C3CF03600C9ABA3 /* PredictResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C324C2C3CF03600C9ABA3 /* PredictResultView.swift */; };
 		1F65AB612C362C3C00FEB692 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65AB602C362C3C00FEB692 /* SplashView.swift */; };
 		1F65AB632C362C5500FEB692 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65AB622C362C5500FEB692 /* TipView.swift */; };
 		1F65AB662C362C7000FEB692 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1F65AB652C362C7000FEB692 /* SDWebImageSwiftUI */; };
@@ -46,8 +47,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A1C8E912C3CF18500A69E02 /* MeatClassficationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatClassficationView.swift; sourceTree = "<group>"; };
-		1A1C8E942C3CF18C00A69E02 /* progres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = progres.swift; sourceTree = "<group>"; };
 		1A221E362C2D5A010038D597 /* PickMeatProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickMeatProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A221E392C2D5A010038D597 /* PickMeatProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeatProjectApp.swift; sourceTree = "<group>"; };
 		1A221E3B2C2D5A010038D597 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +75,9 @@
 		1AF22CC72C36968400CD9D6C /* SelectImageViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewButton.swift; sourceTree = "<group>"; };
 		1AF22CC92C36969E00CD9D6C /* SelectImageViewHoriControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewHoriControlBar.swift; sourceTree = "<group>"; };
 		1AF22CCB2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewVertiControlBar.swift; sourceTree = "<group>"; };
+		1F4C32462C3CE82C00C9ABA3 /* MeatClassficationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatClassficationView.swift; sourceTree = "<group>"; };
+		1F4C32492C3CE83400C9ABA3 /* progres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = progres.swift; sourceTree = "<group>"; };
+		1F4C324C2C3CF03600C9ABA3 /* PredictResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictResultView.swift; sourceTree = "<group>"; };
 		1F65AB602C362C3C00FEB692 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1F65AB622C362C5500FEB692 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		1FE478DF2C3CE27100AF461A /* MeatOrNot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatOrNot.swift; sourceTree = "<group>"; };
@@ -96,22 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A1C8E922C3CF18500A69E02 /* predictView */ = {
-			isa = PBXGroup;
-			children = (
-				1A1C8E912C3CF18500A69E02 /* MeatClassficationView.swift */,
-			);
-			path = predictView;
-			sourceTree = "<group>";
-		};
-		1A1C8E952C3CF18C00A69E02 /* ProgresView */ = {
-			isa = PBXGroup;
-			children = (
-				1A1C8E942C3CF18C00A69E02 /* progres.swift */,
-			);
-			path = ProgresView;
-			sourceTree = "<group>";
-		};
 		1A221E2D2C2D5A010038D597 = {
 			isa = PBXGroup;
 			children = (
@@ -157,8 +143,8 @@
 		1A221E472C2D5A070038D597 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1A1C8E952C3CF18C00A69E02 /* ProgresView */,
-				1A1C8E922C3CF18500A69E02 /* predictView */,
+				1F4C324A2C3CE83400C9ABA3 /* ProgresView */,
+				1F4C32472C3CE82C00C9ABA3 /* predictView */,
 				1F65AB602C362C3C00FEB692 /* SplashView.swift */,
 				1F65AB622C362C5500FEB692 /* TipView.swift */,
 				1A5D109E2C365DF700A4FEEF /* CameraView.swift */,
@@ -188,6 +174,8 @@
 		1A221E492C2D5A130038D597 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */,
+				1AB6FFFF2C3BA2AC000524A1 /* GetModel.swift */,
 				1FE478DF2C3CE27100AF461A /* MeatOrNot.swift */,
 				1A5D109A2C365DC400A4FEEF /* CameraViewModel.swift */,
 				1A6DD7DC2C3BF8FC00EDE08A /* ResultDetailViewModel.swift */,
@@ -208,13 +196,28 @@
 			isa = PBXGroup;
 			children = (
 				1AB6FFFE2C3BA2AC000524A1 /* ClassModel.swift */,
-				1AB6FFFF2C3BA2AC000524A1 /* GetModel.swift */,
 				1AB600002C3BA2AC000524A1 /* MeatClass.swift */,
 				1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */,
 				1AB600022C3BA2AC000524A1 /* SendImage.swift */,
-				1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */,
 			);
 			path = photoTest;
+			sourceTree = "<group>";
+		};
+		1F4C32472C3CE82C00C9ABA3 /* predictView */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C32462C3CE82C00C9ABA3 /* MeatClassficationView.swift */,
+				1F4C324C2C3CF03600C9ABA3 /* PredictResultView.swift */,
+			);
+			path = predictView;
+			sourceTree = "<group>";
+		};
+		1F4C324A2C3CE83400C9ABA3 /* ProgresView */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C32492C3CE83400C9ABA3 /* progres.swift */,
+			);
+			path = ProgresView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +307,12 @@
 				1AB600052C3BA2AC000524A1 /* ClassModel.swift in Sources */,
 				1A6DD7E12C3BFD4D00EDE08A /* ResultDetailView.swift in Sources */,
 				1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */,
+				1F4C324D2C3CF03600C9ABA3 /* PredictResultView.swift in Sources */,
 				1A5D10AC2C365EA600A4FEEF /* View+.swift in Sources */,
-				1A1C8E962C3CF18C00A69E02 /* progres.swift in Sources */,
+				1F4C324B2C3CE83400C9ABA3 /* progres.swift in Sources */,
 				1A5D10A92C365E8100A4FEEF /* CameraView+VerticalControlBar.swift in Sources */,
 				1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */,
-				1A1C8E932C3CF18500A69E02 /* MeatClassficationView.swift in Sources */,
+				1F4C32482C3CE82C00C9ABA3 /* MeatClassficationView.swift in Sources */,
 				1A5D109F2C365DF700A4FEEF /* CameraView.swift in Sources */,
 				1AB600092C3BA2AC000524A1 /* SendImage.swift in Sources */,
 				1AB600062C3BA2AC000524A1 /* GetModel.swift in Sources */,
@@ -460,7 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PickMeatProject/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4TZRMJWQ2;
+				DEVELOPMENT_TEAM = F646K8QSPF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PickMeatProject/Info.plist;
@@ -477,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftlec.PickMeatProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftlec.PickMeatProject-kang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -493,7 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PickMeatProject/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4TZRMJWQ2;
+				DEVELOPMENT_TEAM = F646K8QSPF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PickMeatProject/Info.plist;
@@ -510,7 +514,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftlec.PickMeatProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftlec.PickMeatProject-kang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

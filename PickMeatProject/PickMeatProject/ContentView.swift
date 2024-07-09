@@ -8,35 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var showCamera = true
-    @State var imageData: Data?
-    @State var selectedTab = 0
-    
-    
-    
+    @State private var showCamera = true
+    @State private var imageData: Data?
+    @State var checkImage: String = ""
+    @State var showProgress: Bool = true
+
     var body: some View {
-        TabView {
-            if showCamera {
-                CameraView(imageData: $imageData, showCamera: $showCamera)
-                    .tabItem {
-                        Label("카메라", systemImage: "camera")
-                    }
-            } else {
-                AlbumImageSelectPage(showCamera: $showCamera, imageData: $imageData)
-                    .tabItem {
-                        Label("카메라", systemImage: "camera")
-                    }
-            }
+            TabView {
+
+                if showCamera {
+                    CameraView(imageData: $imageData, showCamera: $showCamera, checkImage: $checkImage)
+                        .tabItem {
+                                            Label("카메라", systemImage: "camera")
+                                        }
+                } else {
+                    AlbumImageSelectPage(showCamera: $showCamera, imageData: $imageData, checkImage: $checkImage )
+                        .tabItem {
+                                            Label("카메라", systemImage: "camera")
+                                        }
+                }
+                
+            
             TipView()
-                .tabItem {
-                    Label("팁", systemImage: "lightbulb")
-                }
-            ResultDetailView()
-                .tabItem {
-                    Label("검사결과", systemImage: "doc.plaintext.fill")
-                }
-        }
+                          .tabItem {
+                              Label("팁", systemImage: "lightbulb")
+                          }
+                
+                      ResultDetailView()
+                          .tabItem {
+                              Label("검사결과", systemImage: "doc.plaintext.fill")
+                          }
+                  }
+        
     }
 }
 
