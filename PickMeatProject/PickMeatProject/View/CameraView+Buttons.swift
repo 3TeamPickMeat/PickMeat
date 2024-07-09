@@ -51,6 +51,7 @@ extension CameraView {
     var photoCaptureButton: some View {
         Button {
             VM.takePhoto()
+            // ------- 카메라 찍었을 때 펑션 ------
         } label: {
             ZStack {
                 Circle()
