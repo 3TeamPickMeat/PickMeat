@@ -52,15 +52,16 @@ struct CameraView: View {
                         .frame(height: controlFrameHeight)
                 }
             }
-            if showHelpOverlay {
-                helpOverlay
-                    .transition(.opacity)
-                    .onTapGesture {
-                        withAnimation {
-                            showHelpOverlay = false
-                        }
-                    }
-            }
+            //MARK: 오버레이 체크
+//            if showHelpOverlay {
+//                helpOverlay
+//                    .transition(.opacity)
+//                    .onTapGesture {
+//                        withAnimation {
+//                            showHelpOverlay = false
+//                        }
+//                    }
+//            }
        
         }
         .photosPicker(isPresented: $showPhotoPicker, selection: $selectedItem, matching: .images)
@@ -140,67 +141,68 @@ struct CameraView: View {
     //        }
     //    }
     
-    private var helpOverlay: some View {
-            ZStack {
-                Color.black.opacity(0.7)
-                    .ignoresSafeArea()
-                VStack {
-                    Text("버튼 기능 설명")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .cornerRadius(10)
-                        .padding()
-                    
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Text("갤러리 버튼")
-                            .font(.subheadline)
-                            .foregroundColor(.white)
-                            .padding()
-                        Spacer()
-                        Spacer()
-                        Text("사진 찍기")
-                            .font(.subheadline)
-                            .foregroundColor(.white)
-                            .padding()
-                        Spacer()
-                        Spacer()
-                        Text("카메라 전환")
-                            .font(.subheadline)
-                            .foregroundColor(.white)
-                            .padding()
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        Image(systemName: "arrow.down")
-                            .resizable()
-                            .frame(width: 45, height: 45)
-                            .padding()
-                        Spacer()
-                        Spacer()
-                        Image(systemName: "arrow.down")
-                            .resizable()
-                            .frame(width: 45, height: 45)
-                            .padding()
-                        Spacer()
-                        Spacer()
-                        Image(systemName: "arrow.down")
-                            .resizable()
-                            .frame(width: 45, height: 45)
-                            .padding()
-                        Spacer()
-                    }
-                    .padding(.bottom, 50)
-                    Text("화면을 터치하여 도움말을 닫으세요")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                        .padding()
-                }
-            }
-        }
+    // 오버레이
+//    private var helpOverlay: some View {
+//            ZStack {
+//                Color.black.opacity(0.7)
+//                    .ignoresSafeArea()
+//                VStack {
+//                    Text("버튼 기능 설명")
+//                        .font(.title)
+//                        .foregroundColor(.white)
+//                        .padding()
+//                        .cornerRadius(10)
+//                        .padding()
+//                    
+//                    Spacer()
+//                    HStack {
+//                        Spacer()
+//                        Text("갤러리 버튼")
+//                            .font(.subheadline)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                        Spacer()
+//                        Spacer()
+//                        Text("사진 찍기")
+//                            .font(.subheadline)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                        Spacer()
+//                        Spacer()
+//                        Text("카메라 전환")
+//                            .font(.subheadline)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                        Spacer()
+//                    }
+//                    HStack {
+//                        Spacer()
+//                        Image(systemName: "arrow.down")
+//                            .resizable()
+//                            .frame(width: 45, height: 45)
+//                            .padding()
+//                        Spacer()
+//                        Spacer()
+//                        Image(systemName: "arrow.down")
+//                            .resizable()
+//                            .frame(width: 45, height: 45)
+//                            .padding()
+//                        Spacer()
+//                        Spacer()
+//                        Image(systemName: "arrow.down")
+//                            .resizable()
+//                            .frame(width: 45, height: 45)
+//                            .padding()
+//                        Spacer()
+//                    }
+//                    .padding(.bottom, 50)
+//                    Text("화면을 터치하여 도움말을 닫으세요")
+//                        .font(.subheadline)
+//                        .foregroundColor(.white)
+//                        .padding()
+//                }
+//            }
+//        }
 }
 
 struct CameraView_Previews: PreviewProvider {

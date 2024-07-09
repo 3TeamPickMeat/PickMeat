@@ -52,7 +52,9 @@ struct PhotoTopython: View {
                 Button("예측하기", action: {
                     
                     if let image = image {
-                        ModelAct.detectObjects(in: image)
+                        ModelAct.detectObjects(in: image){
+                            response in
+                        }
                                  }
                   
                         
