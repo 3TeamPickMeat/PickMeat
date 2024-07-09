@@ -25,6 +25,7 @@ class ImageClassificationViewModel: ObservableObject {
             // 모델 이름을 사용하여 모델 로드
             let coreMLModel = try Meatclassfication(configuration: config)
             self.model = try VNCoreMLModel(for: coreMLModel.model)
+
             print("Model loaded successfully")
         } catch {
             print("Failed to load model: \(error)")
