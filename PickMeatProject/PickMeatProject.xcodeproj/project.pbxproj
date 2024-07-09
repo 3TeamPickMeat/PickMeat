@@ -38,6 +38,9 @@
 		1F65AB612C362C3C00FEB692 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65AB602C362C3C00FEB692 /* SplashView.swift */; };
 		1F65AB632C362C5500FEB692 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65AB622C362C5500FEB692 /* TipView.swift */; };
 		1F65AB662C362C7000FEB692 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1F65AB652C362C7000FEB692 /* SDWebImageSwiftUI */; };
+		1FE478E02C3CE27100AF461A /* MeatOrNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE478DF2C3CE27100AF461A /* MeatOrNot.swift */; };
+		1FE478E22C3CE2B100AF461A /* ProgresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE478E12C3CE2B100AF461A /* ProgresModel.swift */; };
+		1FE478E42C3CE2B800AF461A /* predModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE478E32C3CE2B800AF461A /* predModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		1AF22CCB2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewVertiControlBar.swift; sourceTree = "<group>"; };
 		1F65AB602C362C3C00FEB692 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1F65AB622C362C5500FEB692 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		1FE478DF2C3CE27100AF461A /* MeatOrNot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatOrNot.swift; sourceTree = "<group>"; };
+		1FE478E12C3CE2B100AF461A /* ProgresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgresModel.swift; sourceTree = "<group>"; };
+		1FE478E32C3CE2B800AF461A /* predModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = predModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,8 @@
 		1A221E482C2D5A0F0038D597 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FE478E32C3CE2B800AF461A /* predModel.swift */,
+				1FE478E12C3CE2B100AF461A /* ProgresModel.swift */,
 				1A6DD7DE2C3BF92D00EDE08A /* ResultDetailModel.swift */,
 			);
 			path = Model;
@@ -158,6 +166,7 @@
 		1A221E492C2D5A130038D597 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				1FE478DF2C3CE27100AF461A /* MeatOrNot.swift */,
 				1A5D109A2C365DC400A4FEEF /* CameraViewModel.swift */,
 				1A6DD7DC2C3BF8FC00EDE08A /* ResultDetailViewModel.swift */,
 			);
@@ -287,8 +296,11 @@
 				1AB6000D2C3BA2C1000524A1 /* MeatDetecting.mlmodel in Sources */,
 				1AB6000E2C3BA2C1000524A1 /* Meatclassfication.mlmodel in Sources */,
 				1A6DD7DF2C3BF92D00EDE08A /* ResultDetailModel.swift in Sources */,
+				1FE478E02C3CE27100AF461A /* MeatOrNot.swift in Sources */,
 				1AF22CCC2C3696AE00CD9D6C /* SelectImageViewVertiControlBar.swift in Sources */,
 				1A5D10AE2C365EB800A4FEEF /* UIDeviceOrientation.swift in Sources */,
+				1FE478E42C3CE2B800AF461A /* predModel.swift in Sources */,
+				1FE478E22C3CE2B100AF461A /* ProgresModel.swift in Sources */,
 				1F65AB612C362C3C00FEB692 /* SplashView.swift in Sources */,
 				1AB600072C3BA2AC000524A1 /* MeatClass.swift in Sources */,
 			);

@@ -9,15 +9,23 @@ import SwiftUI
 
 extension AlbumImageSelectPage {
     
+    
+    
     var usePhotoButton: some View {
-        Button {
-            
-        } label: {
+       
+
+         Button(action: {
+                print("아오")
+        }) {
             Text("Send")
                 .tint(.white)
                 .font(.title3)
                 .fontWeight(.semibold)
+             
+            
         }
+        .disabled(checkImage != "")
+
     }
     
     var retakeButton: some View {
@@ -25,21 +33,22 @@ extension AlbumImageSelectPage {
             recentPhotoData = nil
             showCamera = true
             VM.retakePhoto()
+            
+            checkImage = ""
         } label: {
             Text("취소")
                 .tint(.white)
                 .font(.title3)
                 .fontWeight(.semibold)
         }
+        
     }
-    
-    
-    
-    
     
 }
 
-//#Preview {
-//    AlbumImageSelectPage(showCamera: .constant(true))
-//}
+
+
+#Preview {
+    AlbumImageSelectPage(showCamera: .constant(true), imageData: .constant(nil), checkImage: .constant(""))
+}
 

@@ -26,7 +26,7 @@ struct MeatClass: View {
                     Task{
                         if let data = try? await selectedItem?.loadTransferable(type: Data.self){
                             image = UIImage(data: data)
-                            viewModel.classifyImage(image!)
+                           // viewModel.classifyImage(image!, completion: true - > void)
                         }
                         
                     }
