@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1C8E932C3CF18500A69E02 /* MeatClassficationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C8E912C3CF18500A69E02 /* MeatClassficationView.swift */; };
+		1A1C8E962C3CF18C00A69E02 /* progres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C8E942C3CF18C00A69E02 /* progres.swift */; };
 		1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E392C2D5A010038D597 /* PickMeatProjectApp.swift */; };
 		1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A221E3B2C2D5A010038D597 /* ContentView.swift */; };
 		1A221E3E2C2D5A020038D597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A221E3D2C2D5A020038D597 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1C8E912C3CF18500A69E02 /* MeatClassficationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatClassficationView.swift; sourceTree = "<group>"; };
+		1A1C8E942C3CF18C00A69E02 /* progres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = progres.swift; sourceTree = "<group>"; };
 		1A221E362C2D5A010038D597 /* PickMeatProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickMeatProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A221E392C2D5A010038D597 /* PickMeatProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeatProjectApp.swift; sourceTree = "<group>"; };
 		1A221E3B2C2D5A010038D597 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1C8E922C3CF18500A69E02 /* predictView */ = {
+			isa = PBXGroup;
+			children = (
+				1A1C8E912C3CF18500A69E02 /* MeatClassficationView.swift */,
+			);
+			path = predictView;
+			sourceTree = "<group>";
+		};
+		1A1C8E952C3CF18C00A69E02 /* ProgresView */ = {
+			isa = PBXGroup;
+			children = (
+				1A1C8E942C3CF18C00A69E02 /* progres.swift */,
+			);
+			path = ProgresView;
+			sourceTree = "<group>";
+		};
 		1A221E2D2C2D5A010038D597 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +157,8 @@
 		1A221E472C2D5A070038D597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A1C8E952C3CF18C00A69E02 /* ProgresView */,
+				1A1C8E922C3CF18500A69E02 /* predictView */,
 				1F65AB602C362C3C00FEB692 /* SplashView.swift */,
 				1F65AB622C362C5500FEB692 /* TipView.swift */,
 				1A5D109E2C365DF700A4FEEF /* CameraView.swift */,
@@ -283,8 +305,10 @@
 				1A6DD7E12C3BFD4D00EDE08A /* ResultDetailView.swift in Sources */,
 				1A221E3C2C2D5A010038D597 /* ContentView.swift in Sources */,
 				1A5D10AC2C365EA600A4FEEF /* View+.swift in Sources */,
+				1A1C8E962C3CF18C00A69E02 /* progres.swift in Sources */,
 				1A5D10A92C365E8100A4FEEF /* CameraView+VerticalControlBar.swift in Sources */,
 				1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */,
+				1A1C8E932C3CF18500A69E02 /* MeatClassficationView.swift in Sources */,
 				1A5D109F2C365DF700A4FEEF /* CameraView.swift in Sources */,
 				1AB600092C3BA2AC000524A1 /* SendImage.swift in Sources */,
 				1AB600062C3BA2AC000524A1 /* GetModel.swift in Sources */,
