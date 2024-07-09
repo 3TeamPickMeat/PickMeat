@@ -24,6 +24,7 @@ class CameraViewModel: NSObject {
     var session = AVCaptureSession()
     var preview = AVCaptureVideoPreviewLayer()
     var output = AVCapturePhotoOutput()
+    // output 찍었을때의 컨트롤러
     var currentCameraPosition: AVCaptureDevice.Position = .back
     
     var photoData: Data? {
@@ -120,6 +121,7 @@ class CameraViewModel: NSObject {
         session.commitConfiguration()
     }
     
+    // 찍는버튼
     func takePhoto() {
         guard case .notStarted = photoCaptureState else { return }
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
@@ -155,6 +157,7 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
             self.session.stopRunning()
             await MainActor.run {
                 let image = UIImage(cgImage: cgImage, scale: 1, orientation: UIDevice.current.orientation.uiImageOrientation)
+                
                 let imageData = image.pngData()
                 
                 withAnimation {
