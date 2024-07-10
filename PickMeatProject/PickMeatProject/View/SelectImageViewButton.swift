@@ -81,7 +81,7 @@ extension AlbumImageSelectPage {
              let sendData = [actualX,actualY,actualWidth,actualHeight]
              print(sendData)
              let sendmod = SendImageViewModel()
-             sendmod.uploadImage(image: UIImage(data:imageData!)!, to: "http://192.168.25.33:8000/upload",x: actualX,y: actualY, w: actualWidth, h: actualHeight) {
+             sendmod.uploadImage(image: UIImage(data:imageData!)!, to: "http://192.168.10.138:8000/upload",x: actualX,y: actualY, w: actualWidth, h: actualHeight) {
                  resultString in
                  
                  if let resultS = resultString{
