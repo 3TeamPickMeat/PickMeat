@@ -25,13 +25,13 @@ struct PredictResultView: View {
                     Spacer()
                     
                     VStack(spacing: 20) {
-                        if resultText.trimmingCharacters(in: CharacterSet(charactersIn: "\"")) == "신선한거같아요" {
+                        if resultText.trimmingCharacters(in: CharacterSet(charactersIn: "\"")) == "신선" {
                             Image(systemName: "checkmark.seal.fill")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 200, height: 200)
                                 .foregroundColor(.white)
-                        } else if resultText.trimmingCharacters(in: CharacterSet(charactersIn: "\"")) == "평범한 상태에요" {
+                        } else if resultText.trimmingCharacters(in: CharacterSet(charactersIn: "\"")) == "평범" {
                             Image(systemName: "exclamationmark.circle.fill")
                                 .resizable()
                                 .scaledToFit()

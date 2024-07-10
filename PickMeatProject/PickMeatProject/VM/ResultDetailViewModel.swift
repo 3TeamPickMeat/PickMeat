@@ -41,11 +41,17 @@ class ResultDetailViewModel: ObservableObject{
         
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = Int(sqlite3_column_int(stmt, 0))
-            let date = String(cString: sqlite3_column_text(stmt, 1))
-            let meatFresh = String(cString: sqlite3_column_text(stmt, 2))
-            let meatImage: UIImage = UIImage()
-            
-            
+            var meatImage: UIImage = UIImage()
+            let date = String(cString: sqlite3_column_text(stmt, 2))
+            var meatFresh = String(cString: sqlite3_column_text(stmt, 3))
+         
+            // UIImage를 BLOB 변환 처리 방법
+            if let dataBlob = sqlite3_column_blob(stmt, 1){
+                let dataBlobLength = sqlite3_column_bytes(stmt, 1)
+                let data = Data(bytes: dataBlob, count: Int(dataBlobLength))
+                meatImage = UIImage(data: data)!
+                
+            }
             
             meatFreshList.append(ResultDetailModel(id: id, meatImage: meatImage, date: date, meatFresh: meatFresh))
             
@@ -58,12 +64,9 @@ class ResultDetailViewModel: ObservableObject{
     func insertDB(meatImage: UIImage, date: String, meatFresh: String) -> Bool{
         var stmt: OpaquePointer?
         let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
-        let queryString = "INSERT INTO meatFresh (meatImage, date, meatFresh) VALUES (?, now(), ?)"
+        let queryString = "INSERT INTO meatFresh (meatImage, date, meatFresh) VALUES (?, date('now'), ?)"
         
         sqlite3_prepare(db, queryString, -1, &stmt, nil)
-        
-       // sqlite3_bind_text(stmt, 1, date, -1, SQLITE_TRANSIENT)
-      
         
         let imageData = meatImage.jpegData(compressionQuality: 0.7)! as NSData
         sqlite3_bind_blob(stmt, 1, imageData.bytes, Int32(imageData.length), SQLITE_TRANSIENT)
