@@ -76,7 +76,7 @@ async def upload_image(file: UploadFile = File(...) ,x: str = Form(...), y: str 
 
 if __name__ == "__main__":
 
-    uvicorn.run(app,host='192.168.25.33',port=8000)
+    uvicorn.run(app,host='192.168.10.138',port=8000)
 
 
 # uvicorn PYserver:app --reload
