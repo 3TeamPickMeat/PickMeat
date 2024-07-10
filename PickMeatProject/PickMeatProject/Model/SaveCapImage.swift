@@ -8,10 +8,7 @@
 import Foundation
 import UIKit
 
-class SaveImage{
-    var image: UIImage
+class SaveImage: ObservableObject{
+    @Published var imageData: UIImage?
     
-    init(image: UIImage) {
-        self.image = image
-    }
 }

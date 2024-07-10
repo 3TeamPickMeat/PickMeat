@@ -22,6 +22,7 @@ struct CameraPreview: UIViewRepresentable{
         return view
     }
     
+    
     func updateUIView(_ uiView: UIViewType, context: Context) {
         cameraVM.preview.frame = frame
         cameraVM.preview.connection?.videoRotationAngle = UIDevice.current.orientation.videoRotationAngle
