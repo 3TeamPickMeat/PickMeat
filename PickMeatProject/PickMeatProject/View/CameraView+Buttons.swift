@@ -11,15 +11,17 @@ import SwiftUI
 extension CameraView {
     
     var usePhotoButton: some View {
-        Button {
-            imageData = recentPhotoData
+
+        Button(action: {
+            
             showCamera = false
-        } label: {
+            
+        }, label: {
             Text("Send")
-                .tint(.white)
-                .font(.title3)
-                .fontWeight(.semibold)
-        }
+                           .tint(.white)
+                           .font(.title3)
+                           .fontWeight(.semibold)
+        })
     }
     
     var retakeButton: some View {
@@ -52,6 +54,26 @@ extension CameraView {
         Button {
             VM.takePhoto()
             // ------- 카메라 찍었을 때 펑션 ------
+            let save = SaveImage()
+            let myimage = save.imageData
+            if let selectedImage = myimage {
+                loadModel.classifyImage(selectedImage) { response in
+                    if response {
+                        print("제대로 처리")
+                        
+                        //loadModel.isLoad = false
+                        print("카메라뷰",loadModel.isLoad)
+                    }
+                    if loadModel.classificationLabel == "meat" {
+                        
+                    } else {
+                        checkImage = "이미지가 고기가 아닌거같아요 다시 찍어주세요."
+                        
+                        print("camera", checkImage)
+                    }
+                }
+            }
+            
         } label: {
             ZStack {
                 Circle()
