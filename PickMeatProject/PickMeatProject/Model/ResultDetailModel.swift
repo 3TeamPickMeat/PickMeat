@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ResultDetailModel {
+struct ResultDetailModel{
     var id: Int
     var meatImage: UIImage
     var date: String

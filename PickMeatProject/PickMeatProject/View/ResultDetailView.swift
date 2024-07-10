@@ -13,6 +13,7 @@ struct ResultDetailView: View {
     
     var body: some View {
         NavigationView(content: {
+         
             ZStack(content: {
                 Color(.black)
                     .ignoresSafeArea()

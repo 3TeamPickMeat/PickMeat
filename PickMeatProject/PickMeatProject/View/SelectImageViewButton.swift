@@ -87,7 +87,7 @@ extension AlbumImageSelectPage {
                  if let resultS = resultString{
                    resultpred = resultS
                      let redevimodel = ResultDetailViewModel()
-                     let dbresult = redevimodel.insertDB(meatImage: UIImage(data:imageData!)!, date: "", meatFresh: resultS)
+                     let dbresult = redevimodel.insertDB(meatImage: UIImage(data:imageData!)!, date: "" , meatFresh: resultS)
                      if dbresult{
                          print("인서트 성공")
                      }else{
