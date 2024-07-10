@@ -5,23 +5,65 @@
 //  Created by 박정민 on 7/4/24.
 //
 
-
 import SwiftUI
 
 extension CameraView {
     
     var usePhotoButton: some View {
-
-        Button(action: {
-            
-            showCamera = false
-            
-        }, label: {
+        NavigationLink(destination: PredictResultView(resultText: predResult)) {
             Text("Send")
-                           .tint(.white)
-                           .font(.title3)
-                           .fontWeight(.semibold)
+                .foregroundStyle(.white)
+                .font(.title3)
+                .fontWeight(.semibold)
+        }
+        .simultaneousGesture(TapGesture().onEnded {
+            loadModel.isLoad = true
+            pregresState = true
+            print("1", checkImage)
+            print("카메라 send")
+            showCamera = true
+            
+            pregresState = false
+            
+            // 딥러닝 모델 2개 거치기
+            if let data = VM.photoData, let _ = UIImage(data: data) {
+                print("아오")
+                let getmodel = GetModelFunc()
+                getmodel.detectObjects(in: UIImage(data: data)!) { response in
+                    if response {
+                        let box = getmodel.results.first
+                        let x = box!.boundingBox.origin.x
+                        let y = box!.boundingBox.origin.y
+                        let width = box!.boundingBox.width
+                        let height = box!.boundingBox.height
+                        
+                        print("BoundingBox - x: \(String(describing: x)), y: \(String(describing: y)), width: \(String(describing: width)), height: \(String(describing: height))")
+                        //print("이미지 사이즈", UIImage(data: imageData!)!.size)
+                        let imageSize = UIImage(data: data)!.size
+                        print(imageSize)
+                        
+                        let actualX = x * imageSize.width
+                        let actualY = y * imageSize.height
+                        let actualWidth = width * imageSize.width
+                        let actualHeight = height * imageSize.height
+                        
+                        print("BoundingBox - x: \(actualX), y: \(actualY), width: \(actualWidth), height: \(actualHeight)")
+                        let sendData = [actualX, actualY, actualWidth, actualHeight]
+                        print(sendData)
+                        let sendmod = SendImageViewModel()
+                        sendmod.uploadImage(image: UIImage(data: data)!, to: "http://192.168.25.33:8000/upload", x: actualX, y: actualY, w: actualWidth, h: actualHeight) { resultString in
+                            if let resultS = resultString {
+                                predResult = resultS
+                                pregresState = false
+                            } else {
+                                return
+                            }
+                        }
+                    }
+                }
+            }
         })
+        .disabled(checkImage != "")
     }
     
     var retakeButton: some View {
@@ -29,6 +71,7 @@ extension CameraView {
             recentPhotoData = nil
             showCamera = true
             VM.retakePhoto()
+            checkImage = ""
         } label: {
             Text("다시찍기")
                 .tint(.white)
@@ -36,8 +79,6 @@ extension CameraView {
                 .fontWeight(.semibold)
         }
     }
-    
-    
     
     var AlbumButton: some View {
         Button {
@@ -54,26 +95,26 @@ extension CameraView {
         Button {
             VM.takePhoto()
             // ------- 카메라 찍었을 때 펑션 ------
-            let save = SaveImage()
-            let myimage = save.imageData
-            if let selectedImage = myimage {
-                loadModel.classifyImage(selectedImage) { response in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                print("2초 딜레이")
+                let data = VM.photoData
+                let image = UIImage(data: data!)
+                selectImage = image
+                loadModel.classifyImage(image!) { response in
                     if response {
-                        print("제대로 처리")
-                        
-                        //loadModel.isLoad = false
-                        print("카메라뷰",loadModel.isLoad)
-                    }
-                    if loadModel.classificationLabel == "meat" {
-                        
-                    } else {
-                        checkImage = "이미지가 고기가 아닌거같아요 다시 찍어주세요."
-                        
-                        print("camera", checkImage)
+                        loadModel.isLoad = false
+                        if loadModel.classificationLabel != "meat" {
+                            checkImage = "이미지가 고기가 아닌거같아요 다시 찍어주세요."
+                            showMessage = true
+                            print("2", checkImage)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                print("3", checkImage)
+                                showMessage = false
+                            }
+                        }
                     }
                 }
             }
-            
         } label: {
             ZStack {
                 Circle()
@@ -84,7 +125,6 @@ extension CameraView {
                     .frame(width: 75)
             }
         }
-        
     }
     
     var changeCamera: some View {
@@ -103,11 +143,4 @@ extension CameraView {
             .cornerRadius(10)
         }
     }
-    
-    
 }
-
-//#Preview {
-//    CameraView(showCamera: .constant(true))
-//}
-

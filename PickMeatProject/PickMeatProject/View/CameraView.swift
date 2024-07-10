@@ -22,14 +22,19 @@ struct CameraView: View {
     @State var selectedItem: PhotosPickerItem?
     @State var selectImage: UIImage?
     
-    @State var showPhotoPicker = false
+    @State var showPhotoPicker = false  // 포토픽커 뷰 상태표시
     @State var recentPhotoData: Data?
     
     @State var showHelpOverlay = true  // 도움말 오버레이 상태 변수 추가
     
-    @Binding var checkImage: String
+    @State var pregresState: Bool = false
     
-    //@State var showProgress: Bool = true // 로딩 상태 변수 추가
+    @State var predResult: String = "" // 머신러닝 결과값
+    
+    @Binding var checkImage: String
+
+    //@State var PhotoselectImage: UIImage? // 카메라 이미지 상태 추가
+       
     
     let controlButtonWidth: CGFloat = 120
     let controlFrameHeight: CGFloat = 90
@@ -37,114 +42,110 @@ struct CameraView: View {
     var isLandscape: Bool { vertiSizeClass == .compact }
     
     var body: some View {
-        ZStack {
-         
-            Color(.black)
-                .ignoresSafeArea()
-            VStack {
-                HStack {
-                    cameraPreview
-                    if isLandscape {
-                        verticalControlBar
-                            .frame(width: controlFrameHeight)
+        NavigationStack{
+            ZStack {
+                
+                
+                Color(.black)
+                    .ignoresSafeArea()
+                VStack {
+                    HStack {
+                        cameraPreview
+                        if isLandscape {
+                            verticalControlBar
+                                .frame(width: controlFrameHeight)
+                        }
+                    }
+                    if !isLandscape {
+                        horizontalControlBar
+                            .frame(height: controlFrameHeight)
                     }
                 }
-                if !isLandscape {
-                    horizontalControlBar
-                        .frame(height: controlFrameHeight)
+                //MARK: 오버레이 체크
+                //            if showHelpOverlay {
+                //                helpOverlay
+                //                    .transition(.opacity)
+                //                    .onTapGesture {
+                //                        withAnimation {
+                //                            showHelpOverlay = false
+                //                        }
+                //                    }
+                //            }
+                // 메세지
+                if showMessage && checkImage != ""{
+                    Text(checkImage)
+                        .padding()
+                        .background(Color.black.opacity(0.7))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .frame(width: 350,height: 40)
+                        .position(x: 190 , y: 50)
+                }
+                
+                // 프로그래스
+                if  loadModel.isLoad && pregresState{
+                    CustomProgressView()
                 }
             }
-            //MARK: 오버레이 체크
-//            if showHelpOverlay {
-//                helpOverlay
-//                    .transition(.opacity)
-//                    .onTapGesture {
-//                        withAnimation {
-//                            showHelpOverlay = false
-//                        }
-//                    }
-//            }
-       
-        }
-        .photosPicker(isPresented: $showPhotoPicker, selection: $selectedItem, matching: .images)
-        .onChange(of: selectedItem) {
-            if let item = selectedItem {
-                Task {
-                    if let data = try? await
-                        
-                        item.loadTransferable(type: Data.self) {
-                        selectImage = UIImage(data: data)
-                        // selectImage 픽커에서 선택한 이미지 ------
-                        
-                        imageData = data
-                        showCamera = false
-                        print("이미지 사진 : ", selectImage!)
-                        print("data : \(imageData!)")
-                        print(checkImage)
-                        // 이미지 분류 함수 호출
-                        
-                        if let selectedImage = selectImage {
-                            loadModel.classifyImage(selectedImage) { response in
-                                if response {
-                                    print("제대로 처리")
-                                  
-                                    loadModel.isLoad = false
-                                    print("카메라뷰",loadModel.isLoad)
-                                }
-                                if loadModel.classificationLabel == "meat" {
-                                            //
-                                } else {
-                                    checkImage = "이미지가 고기가 아닌거같아요 다시 찍어주세요."
+            
+            .photosPicker(isPresented: $showPhotoPicker, selection: $selectedItem, matching: .images)
+            .onChange(of: selectedItem) {
+                if let item = selectedItem {
+                    Task {
+                        if let data = try? await
+                            
+                            item.loadTransferable(type: Data.self) {
+                            selectImage = UIImage(data: data)
+                            // selectImage 픽커에서 선택한 이미지 ------
+                            
+                            imageData = data
+                            showCamera = false
+                            print("이미지 사진 : ", selectImage!)
+                            print("data : \(imageData!)")
+                            print(checkImage)
+                            // 이미지 분류 함수 호출
+                            
+                            if let selectedImage = selectImage {
+                                loadModel.classifyImage(selectedImage) { response in
+                                    if response {
+                                        print("제대로 처리")
+                                        
+                                        loadModel.isLoad = false
+                                        print("카메라뷰",loadModel.isLoad)
+                                    }
+                                    if loadModel.classificationLabel == "meat" {
+                                        
+                                    } else {
+                                        checkImage = "이미지가 고기가 아닌거같아요 다시 선택해 주세요."
+                                        
+                                        print("camera", checkImage)
+                                    }
                                     
-                                    print("camera", checkImage)
                                 }
                                 
                             }
                             
+                            
                         }
                         
-           
                     }
                     
                 }
-                
             }
             
-            // 고기체크 알림 함수
-            func showMessageWithTimer()  {
-                print("ad",loadModel.isLoad)
-                showMessage = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    withAnimation {
-                        showMessage = false
-                    }
-                }
-            }
         }
-        // 메세지
-        if showMessage{
-            Text(checkImage)
-                .padding()
-                .background(Color.black.opacity(0.7))
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                .frame(width: 350,height: 40)
-                .position(x: 190 , y: 50)
-        }
-        
-        // 프로그래스
-        if  loadModel.isLoad{
-            CustomProgressView()
-        }
+
     }
-    
+    // 움직이는 카메라뷰
     private var cameraPreview: some View {
         GeometryReader { geo in
-            CameraPreview(cameraVM: $VM, frame: geo.frame(in: .global))
-                .ignoresSafeArea()
-                .onAppear {
-                    VM.requestAccessAndSetup()
-                }
+                    
+                CameraPreview(cameraVM: $VM, frame: geo.frame(in: .global))
+                    .ignoresSafeArea()
+                    .onAppear {
+                        VM.requestAccessAndSetup()
+                    }
+            
         }
         .ignoresSafeArea()
     }

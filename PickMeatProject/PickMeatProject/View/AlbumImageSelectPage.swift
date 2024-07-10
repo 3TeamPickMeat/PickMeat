@@ -34,6 +34,8 @@ struct AlbumImageSelectPage: View {
     
     @State var resultpred: String = ""
     
+    @State var GoToBack: Bool = true
+    
     let controlButtonWidth: CGFloat = 120
     let controlFrameHeight: CGFloat = 90
     
@@ -71,32 +73,35 @@ struct AlbumImageSelectPage: View {
                     }
                 }
                 .onAppear {
+                    showMessageWithTimer()
                     if let imageData = imageData {
                         print("앨범 이미지 데이터: \(imageData)")
                         
                     } else {
                         print("앨범 이미지가 없습니다.")
                     }
-                    showMessageWithTimer()
+                   
                     
                 }
                 .toolbar(.hidden, for: .tabBar)
-                if showMessage{
+                
+                //상단 고기/낫고기 텍스트 알림
+                if showMessage && checkImage != ""{
+                    
                     Text(checkImage)
                         .padding()
                         .background(Color.black.opacity(0.7))
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                    //.transition(.opacity)
                         .frame(width: 350,height: 40)
                         .position(x: 190 , y: 50)
+                        //.opacity(showMessage ? 1 : 0)
                 }
-                
-                
-                if  loadModel.isLoad{
+
+                if  loadModel.isLoad && GoToBack{
                     CustomProgressView()
                 }
-                if isActive{
+                if isActive && GoToBack{
                     CustomProgressView()
                 }
             }
@@ -108,9 +113,9 @@ struct AlbumImageSelectPage: View {
         print("ad",loadModel.isLoad)
         showMessage = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            withAnimation {
+          
                 showMessage = false
-            }
+            
         }
     }
 }

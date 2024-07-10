@@ -26,7 +26,6 @@
 		1AB600062C3BA2AC000524A1 /* GetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6FFFF2C3BA2AC000524A1 /* GetModel.swift */; };
 		1AB600072C3BA2AC000524A1 /* MeatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600002C3BA2AC000524A1 /* MeatClass.swift */; };
 		1AB600082C3BA2AC000524A1 /* PhotoTopython.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */; };
-		1AB600092C3BA2AC000524A1 /* SendImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600022C3BA2AC000524A1 /* SendImage.swift */; };
 		1AB6000A2C3BA2AC000524A1 /* SendPythonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */; };
 		1AB6000D2C3BA2C1000524A1 /* MeatDetecting.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6000B2C3BA2C1000524A1 /* MeatDetecting.mlmodel */; };
 		1AB6000E2C3BA2C1000524A1 /* Meatclassfication.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6000C2C3BA2C1000524A1 /* Meatclassfication.mlmodel */; };
@@ -66,7 +65,6 @@
 		1A6DD7E02C3BFD4D00EDE08A /* ResultDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailView.swift; sourceTree = "<group>"; };
 		1AB600002C3BA2AC000524A1 /* MeatClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeatClass.swift; sourceTree = "<group>"; };
 		1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTopython.swift; sourceTree = "<group>"; };
-		1AB600022C3BA2AC000524A1 /* SendImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendImage.swift; sourceTree = "<group>"; };
 		1AB600032C3BA2AC000524A1 /* SendPythonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPythonModel.swift; sourceTree = "<group>"; };
 		1AB6000B2C3BA2C1000524A1 /* MeatDetecting.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MeatDetecting.mlmodel; sourceTree = "<group>"; };
 		1AB6000C2C3BA2C1000524A1 /* Meatclassfication.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Meatclassfication.mlmodel; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				1AB6FFFE2C3BA2AC000524A1 /* ClassModel.swift */,
 				1AB600002C3BA2AC000524A1 /* MeatClass.swift */,
 				1AB600012C3BA2AC000524A1 /* PhotoTopython.swift */,
-				1AB600022C3BA2AC000524A1 /* SendImage.swift */,
 			);
 			path = photoTest;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 				1A221E3A2C2D5A010038D597 /* PickMeatProjectApp.swift in Sources */,
 				1F4C32482C3CE82C00C9ABA3 /* MeatClassficationView.swift in Sources */,
 				1A5D109F2C365DF700A4FEEF /* CameraView.swift in Sources */,
-				1AB600092C3BA2AC000524A1 /* SendImage.swift in Sources */,
 				1AB600062C3BA2AC000524A1 /* GetModel.swift in Sources */,
 				1AB6000A2C3BA2AC000524A1 /* SendPythonModel.swift in Sources */,
 				1A5D109B2C365DC400A4FEEF /* CameraViewModel.swift in Sources */,
