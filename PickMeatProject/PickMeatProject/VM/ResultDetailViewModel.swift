@@ -58,16 +58,17 @@ class ResultDetailViewModel: ObservableObject{
     func insertDB(meatImage: UIImage, date: String, meatFresh: String) -> Bool{
         var stmt: OpaquePointer?
         let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
-        let queryString = "INSERT INTO meatFresh (meatImage, date, meatFresh) VALUES (?, ?, ?)"
+        let queryString = "INSERT INTO meatFresh (meatImage, date, meatFresh) VALUES (?, now(), ?)"
         
         sqlite3_prepare(db, queryString, -1, &stmt, nil)
         
-        sqlite3_bind_text(stmt, 1, date, -1, SQLITE_TRANSIENT)
+       // sqlite3_bind_text(stmt, 1, date, -1, SQLITE_TRANSIENT)
+      
+        
+        let imageData = meatImage.jpegData(compressionQuality: 0.7)! as NSData
+        sqlite3_bind_blob(stmt, 1, imageData.bytes, Int32(imageData.length), SQLITE_TRANSIENT)
+        
         sqlite3_bind_text(stmt, 2, meatFresh, -1, SQLITE_TRANSIENT)
-        
-        let imageData = meatImage.jpegData(compressionQuality: 0.4)! as NSData
-        sqlite3_bind_blob(stmt, 3, imageData.bytes, Int32(imageData.length), SQLITE_TRANSIENT)
-        
         
         if sqlite3_step(stmt) == SQLITE_DONE{
             return true

@@ -55,6 +55,13 @@ extension CameraView {
                             if let resultS = resultString {
                                 predResult = resultS
                                 pregresState = false
+                                let redevimodel = ResultDetailViewModel()
+                                let dbresult = redevimodel.insertDB(meatImage: UIImage(data:imageData!)!, date: "", meatFresh: resultS)
+                                if dbresult{
+                                    print("인서트 성공")
+                                }else{
+                                    print("인서트 실패")
+                                }
                             } else {
                                 return
                             }
@@ -104,7 +111,7 @@ extension CameraView {
                     if response {
                         loadModel.isLoad = false
                         if loadModel.classificationLabel != "meat" {
-                            checkImage = "이미지가 고기가 아닌거같아요 다시 찍어주세요."
+                            checkImage = "고기가 아닌거같아요 다시 찍어주세요."
                             showMessage = true
                             print("2", checkImage)
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
