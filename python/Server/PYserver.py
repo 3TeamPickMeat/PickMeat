@@ -81,3 +81,4 @@ if __name__ == "__main__":
 
 # uvicorn PYserver:app --reload
 # uvicorn PYserver:app --host 192.168.10.138 --port 8000 --reload
+# uvicorn PYserver:app --host 192.168.25.33 --port 8000 --reload

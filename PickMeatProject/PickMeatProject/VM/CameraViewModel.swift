@@ -36,7 +36,6 @@ class CameraViewModel: NSObject {
     var hasPhoto: Bool { photoData != nil }
     
     private(set) var photoCaptureState: PhotoCaptureState = .notStarted
-    
     func requestAccessAndSetup() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .notDetermined:
@@ -157,17 +156,13 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
             self.session.stopRunning()
             await MainActor.run {
                 let image = UIImage(cgImage: cgImage, scale: 1, orientation: UIDevice.current.orientation.uiImageOrientation)
-               
-                let imageData = image.pngData()
-                let save = SaveImage()
-                save.imageData = image
                 
-                withAnimation {
-                    if let imageData = imageData {
+                if let imageData = image.pngData() {
+                    withAnimation {
                         self.photoCaptureState = .finished(imageData)
-                    } else {
-                        print("error occurred")
                     }
+                } else {
+                    print("Error occurred")
                 }
             }
         }

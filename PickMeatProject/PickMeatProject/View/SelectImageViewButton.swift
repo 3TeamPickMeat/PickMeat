@@ -19,6 +19,7 @@ extension AlbumImageSelectPage {
         }
         .simultaneousGesture(TapGesture().onEnded {
             //loadModel.isLoad = false
+            GoToBack = false
              getmodeldata()
             if resultpred == ""{
                 isActive = true
