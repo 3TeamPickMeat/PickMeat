@@ -34,8 +34,6 @@ struct AlbumImageSelectPage: View {
     
     @State var resultpred: String = ""
     
-    //@ var showProgress: Bool // 로딩 상태 변수 추가
-    
     let controlButtonWidth: CGFloat = 120
     let controlFrameHeight: CGFloat = 90
     
@@ -105,7 +103,6 @@ struct AlbumImageSelectPage: View {
             
         }
         
-   
     }
     func showMessageWithTimer()  {
         print("ad",loadModel.isLoad)

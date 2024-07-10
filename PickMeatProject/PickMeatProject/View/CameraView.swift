@@ -14,6 +14,8 @@ struct CameraView: View {
     
     @EnvironmentObject var loadModel: ImageClassificationViewModel
     
+    @State var showMessage: Bool = false
+    
     @State var VM = CameraViewModel()
     @Binding var imageData: Data?
     @Binding var showCamera: Bool
@@ -85,7 +87,7 @@ struct CameraView: View {
                             loadModel.classifyImage(selectedImage) { response in
                                 if response {
                                     print("제대로 처리")
-                                    //showProgress = false
+                                  
                                     loadModel.isLoad = false
                                     print("카메라뷰",loadModel.isLoad)
                                 }
@@ -96,12 +98,43 @@ struct CameraView: View {
                                     
                                     print("camera", checkImage)
                                 }
+                                
                             }
+                            
                         }
                         
+           
+                    }
+                    
+                }
+                
+            }
+            
+            // 고기체크 알림 함수
+            func showMessageWithTimer()  {
+                print("ad",loadModel.isLoad)
+                showMessage = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    withAnimation {
+                        showMessage = false
                     }
                 }
             }
+        }
+        // 메세지
+        if showMessage{
+            Text(checkImage)
+                .padding()
+                .background(Color.black.opacity(0.7))
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .frame(width: 350,height: 40)
+                .position(x: 190 , y: 50)
+        }
+        
+        // 프로그래스
+        if  loadModel.isLoad{
+            CustomProgressView()
         }
     }
     
